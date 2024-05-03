@@ -8,13 +8,13 @@ static class PlaneBounds
 public:
 	///////////////////////////////////////////////////////////
 	static PlaneBounds* GetInstance();
-	void SetBounds(float left, float right, float lower, float upper);
-	void ConvertPointToScreenRange(const Point& point, float& x, float& y);
+	void SetBounds(double left, double right, double lower, double upper);
+	void ConvertPointToScreenRange(const Point& point, double& x, double& y);
 
+	double Left, Right, Upper, Lower;
 private:
 	PlaneBounds();
-	float Left, Right, Upper, Lower;
 };
 
-void SetPlaneBounds(const float leftBound, const float rightBound, const float lowerBound, const float upperBound);
-void PointToScreen(const Point& point, float& x, float& y);
+void SetPlaneBounds(const double leftBound, const double rightBound, const double lowerBound, const double upperBound);
+void PointToScreen(const Point& point, double& x, double& y);

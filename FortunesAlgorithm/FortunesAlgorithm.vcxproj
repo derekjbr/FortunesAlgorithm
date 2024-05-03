@@ -133,12 +133,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\algo\FortunesAlgorithm.cpp" />
     <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\types\DCELTypes.cpp" />
+    <ClCompile Include="src\types\Point.cpp" />
+    <ClCompile Include="src\types\VoronoiDiagram.cpp" />
     <ClCompile Include="src\utils\Conversion.cpp" />
+    <ClCompile Include="src\utils\PriorityQueue.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\algo\FortunesAlgorithm.h" />
+    <ClInclude Include="src\types\DCELTypes.h" />
+    <ClInclude Include="src\types\Event.h" />
     <ClInclude Include="src\types\Point.h" />
+    <ClInclude Include="src\types\VoronoiDiagram.h" />
     <ClInclude Include="src\utils\Conversion.h" />
+    <ClInclude Include="src\utils\PriorityQueue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

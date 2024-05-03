@@ -19,7 +19,7 @@ PlaneBounds* PlaneBounds::GetInstance()
 }
 
 ///////////////////////////////////////////////////////////
-void PlaneBounds::SetBounds(float left, float right, float lower, float upper)
+void PlaneBounds::SetBounds(double left, double right, double lower, double upper)
 {
 	Left = left;
 	Right = right;
@@ -28,21 +28,21 @@ void PlaneBounds::SetBounds(float left, float right, float lower, float upper)
 }
 
 ///////////////////////////////////////////////////////////
-void PlaneBounds::ConvertPointToScreenRange(const Point& point, float& x, float& y)
+void PlaneBounds::ConvertPointToScreenRange(const Point& point, double& x, double& y)
 {
 	x = (point.x - Left) * (2.0f) / (Right - Left) - 1.f;
 	y = (point.y - Lower) * (2.0f) / (Upper - Lower) - 1.f;
 }
 
 ///////////////////////////////////////////////////////////
-void SetPlaneBounds(const float leftBound, const float rightBound, const float lowerBound, const float upperBound)
+void SetPlaneBounds(const double leftBound, const double rightBound, const double lowerBound, const double upperBound)
 {
 	PlaneBounds* bounds = PlaneBounds::GetInstance();
 	bounds->SetBounds(leftBound, rightBound, lowerBound, upperBound);
 }
 
 ///////////////////////////////////////////////////////////
-void PointToScreen(const Point& point, float& x, float& y)
+void PointToScreen(const Point& point, double& x, double& y)
 {
 	PlaneBounds* bounds = PlaneBounds::GetInstance();
 	bounds->ConvertPointToScreenRange(point, x, y);
